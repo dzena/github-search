@@ -31,7 +31,6 @@ export abstract class RoutedEntityList {
   public service: SearchService<SearchModel>;
 
   protected abstract mapToListItem(item: SearchModel): IListItemModel;
-  protected abstract onFilterChanged(filter: IListFilterModel): void;
 
   protected constructor(
     protected route: ActivatedRoute,
