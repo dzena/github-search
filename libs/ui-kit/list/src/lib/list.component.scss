@@ -1,0 +1,20 @@
+$paginator-height: 56px;
+$heading-height: 75px;
+$content-h-spacing: 100px;
+
+.list-heading {
+  height: $heading-height;
+  padding: 0 $content-h-spacing;
+}
+
+.list-container {
+  height: calc(100% - #{$paginator-height} - #{$heading-height});
+  padding: 0 $content-h-spacing;
+  overflow: auto;
+}
+
+.paginator {
+  position: sticky;
+  height: $paginator-height;
+  bottom: 0;
+}

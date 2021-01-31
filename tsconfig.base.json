@@ -14,7 +14,38 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@github-search/material": ["libs/material/src/index.ts"],
+      "@github-search/model": ["libs/model/src/index.ts"],
+      "@github-search/feature/lazy/users": [
+        "libs/feature/lazy/users/src/index.ts"
+      ],
+      "@github-search/feature/api/search": [
+        "libs/feature/api/search/src/index.ts"
+      ],
+      "@github-search/utils/func": ["libs/utils/func/src/index.ts"],
+      "@github-search/feature/api/users": [
+        "libs/feature/api/users/src/index.ts"
+      ],
+      "@github-search/feature/lazy/search": [
+        "libs/feature/lazy/search/src/index.ts"
+      ],
+      "@github-search/feature/shared/search-results-page": [
+        "libs/feature/shared/search-results-page/src/index.ts"
+      ],
+      "@github-search/ui-kit/toolbar": ["libs/ui-kit/toolbar/src/index.ts"],
+      "@github-search/shared/classes": ["libs/shared/classes/src/index.ts"],
+      "@github-search/ui-kit/list": ["libs/ui-kit/list/src/index.ts"],
+      "@github-search/ui-kit/list-filter": [
+        "libs/ui-kit/list-filter/src/index.ts"
+      ],
+      "@github-search/ui-kit/search-form": [
+        "libs/ui-kit/search-form/src/index.ts"
+      ],
+      "@github-search/shared/directives": [
+        "libs/shared/directives/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

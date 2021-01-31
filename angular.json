@@ -47,7 +47,10 @@
               "apps/github-user-search/src/favicon.ico",
               "apps/github-user-search/src/assets"
             ],
-            "styles": ["apps/github-user-search/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/github-user-search/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -138,6 +141,356 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/github-user-search-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material/src/**/*.ts",
+              "libs/material/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/material"],
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "model": {
+      "projectType": "library",
+      "root": "libs/model",
+      "sourceRoot": "libs/model/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/model/src/**/*.ts",
+              "libs/model/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/model"],
+          "options": {
+            "jestConfig": "libs/model/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-lazy-users": {
+      "projectType": "library",
+      "root": "libs/feature/lazy/users",
+      "sourceRoot": "libs/feature/lazy/users/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/lazy/users/src/**/*.ts",
+              "libs/feature/lazy/users/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/lazy/users"],
+          "options": {
+            "jestConfig": "libs/feature/lazy/users/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-api-search": {
+      "projectType": "library",
+      "root": "libs/feature/api/search",
+      "sourceRoot": "libs/feature/api/search/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/api/search/src/**/*.ts",
+              "libs/feature/api/search/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/api/search"],
+          "options": {
+            "jestConfig": "libs/feature/api/search/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "utils-func": {
+      "projectType": "library",
+      "root": "libs/utils/func",
+      "sourceRoot": "libs/utils/func/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/utils/func/src/**/*.ts",
+              "libs/utils/func/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/utils/func"],
+          "options": {
+            "jestConfig": "libs/utils/func/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-api-users": {
+      "projectType": "library",
+      "root": "libs/feature/api/users",
+      "sourceRoot": "libs/feature/api/users/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/api/users/src/**/*.ts",
+              "libs/feature/api/users/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/api/users"],
+          "options": {
+            "jestConfig": "libs/feature/api/users/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-lazy-search": {
+      "projectType": "library",
+      "root": "libs/feature/lazy/search",
+      "sourceRoot": "libs/feature/lazy/search/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/lazy/search/src/**/*.ts",
+              "libs/feature/lazy/search/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/lazy/search"],
+          "options": {
+            "jestConfig": "libs/feature/lazy/search/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-shared-search-results-page": {
+      "projectType": "library",
+      "root": "libs/feature/shared/search-results-page",
+      "sourceRoot": "libs/feature/shared/search-results-page/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/shared/search-results-page/src/**/*.ts",
+              "libs/feature/shared/search-results-page/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/shared/search-results-page"],
+          "options": {
+            "jestConfig": "libs/feature/shared/search-results-page/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui-kit-toolbar": {
+      "projectType": "library",
+      "root": "libs/ui-kit/toolbar",
+      "sourceRoot": "libs/ui-kit/toolbar/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-kit/toolbar/src/**/*.ts",
+              "libs/ui-kit/toolbar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-kit/toolbar"],
+          "options": {
+            "jestConfig": "libs/ui-kit/toolbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-classes": {
+      "projectType": "library",
+      "root": "libs/shared/classes",
+      "sourceRoot": "libs/shared/classes/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/classes/src/**/*.ts",
+              "libs/shared/classes/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/classes"],
+          "options": {
+            "jestConfig": "libs/shared/classes/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui-kit-list": {
+      "projectType": "library",
+      "root": "libs/ui-kit/list",
+      "sourceRoot": "libs/ui-kit/list/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-kit/list/src/**/*.ts",
+              "libs/ui-kit/list/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-kit/list"],
+          "options": {
+            "jestConfig": "libs/ui-kit/list/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui-kit-list-filter": {
+      "projectType": "library",
+      "root": "libs/ui-kit/list-filter",
+      "sourceRoot": "libs/ui-kit/list-filter/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-kit/list-filter/src/**/*.ts",
+              "libs/ui-kit/list-filter/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-kit/list-filter"],
+          "options": {
+            "jestConfig": "libs/ui-kit/list-filter/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui-kit-search-form": {
+      "projectType": "library",
+      "root": "libs/ui-kit/search-form",
+      "sourceRoot": "libs/ui-kit/search-form/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-kit/search-form/src/**/*.ts",
+              "libs/ui-kit/search-form/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-kit/search-form"],
+          "options": {
+            "jestConfig": "libs/ui-kit/search-form/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-directives": {
+      "projectType": "library",
+      "root": "libs/shared/directives",
+      "sourceRoot": "libs/shared/directives/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/directives/src/**/*.ts",
+              "libs/shared/directives/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/directives"],
+          "options": {
+            "jestConfig": "libs/shared/directives/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

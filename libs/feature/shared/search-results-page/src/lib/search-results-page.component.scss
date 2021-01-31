@@ -1,0 +1,13 @@
+.search-res-sidenav-container {
+  // 64px is the height of the toolbar TODO export as variable
+  height: calc(100% - 56px);
+
+  .search-res-sidenav {
+    width: 230px;
+  }
+
+  .active-menu-item {
+    background: rgba(63, 81, 181, 0.15);
+    color: #3f51b5;
+  }
+}

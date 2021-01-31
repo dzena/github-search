@@ -1,0 +1,15 @@
+<ng-container *ngIf="listData$ | async as listData; else loading">
+  <github-search-list
+    [list]="listData.items"
+    [totalCount]="listData.totalCount"
+  >
+    <github-search-list-filter
+      [options]="filterOptions"
+      [value]="filterValue"
+      (filterChanged)="onFilterChanged($event)"
+      filter
+    ></github-search-list-filter>
+  </github-search-list>
+</ng-container>
+
+<ng-template #loading> Loading... </ng-template>

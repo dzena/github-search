@@ -1,14 +1,9 @@
 {
   "npmScope": "github-search",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -17,18 +12,28 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "github-user-search": {
-      "tags": []
-    },
+    "github-user-search": { "tags": [] },
     "github-user-search-e2e": {
       "tags": [],
       "implicitDependencies": ["github-user-search"]
-    }
+    },
+    "material": { "tags": [] },
+    "model": { "tags": [] },
+    "feature-lazy-users": { "tags": [] },
+    "feature-api-search": { "tags": [] },
+    "utils-func": { "tags": [] },
+    "feature-api-users": { "tags": [] },
+    "feature-lazy-search": { "tags": [] },
+    "feature-shared-search-results-page": { "tags": [] },
+    "ui-kit-toolbar": { "tags": [] },
+    "shared-classes": { "tags": [] },
+    "ui-kit-list": { "tags": [] },
+    "ui-kit-list-filter": { "tags": [] },
+    "ui-kit-search-form": { "tags": [] },
+    "shared-directives": { "tags": [] }
   }
 }
