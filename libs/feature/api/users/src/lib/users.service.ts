@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { SearchService } from '@github-search/feature/api/search';
@@ -27,15 +27,11 @@ export class UsersService extends SearchService<IUserListModel | IUserModel> {
     return this._route.queryParams.pipe(
       filter((params) => 'q' in params),
       switchMap(({ q, page, per_page, sort, order }: IListQueryParamsModel) => {
-        // TODO add to http interceptor
-        const headers = new HttpHeaders({
-          accept: 'application/vnd.github.v3+json',
-        });
         const params = new HttpParams({
           fromObject: { q, page, per_page, sort, order },
         });
         return this.http
-          .get<IApiUsers>(getEndpoint('search/users'), { params, headers })
+          .get<IApiUsers>(getEndpoint('search/users'), { params })
           .pipe(
             tap((response) => this.count$.next(response.total_count)),
             map((response) => response.items)
@@ -45,9 +41,6 @@ export class UsersService extends SearchService<IUserListModel | IUserModel> {
   }
 
   public getById(id: string): Observable<IUserModel> {
-    const headers = new HttpHeaders({
-      accept: 'application/vnd.github.v3+json',
-    });
-    return this.http.get<IUserModel>(getEndpoint(`users/${id}`), { headers });
+    return this.http.get<IUserModel>(getEndpoint(`users/${id}`));
   }
 }

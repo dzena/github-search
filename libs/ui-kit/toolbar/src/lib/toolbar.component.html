@@ -1,6 +1,10 @@
-<mat-toolbar color="primary" class="app-toolbar">
-  <a routerLink="/" fxLayoutAlign="center center">
-    <img src="assets/images/github.svg" />
-  </a>
-  <ng-content select="[search]"></ng-content>
-</mat-toolbar>
+<div class="toolbar-container">
+  <mat-toolbar color="primary" class="app-toolbar">
+    <a routerLink="/" fxLayoutAlign="center center">
+      <img src="assets/images/github.svg" />
+    </a>
+  </mat-toolbar>
+  <div class="app-progress-bar">
+    <github-search-loading-progress></github-search-loading-progress>
+  </div>
+</div>

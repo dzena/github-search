@@ -1,9 +1,16 @@
-$toolbar-height: 56px;
+$toolbar-height: 52px;
+$progress-bar-height: 4px;
 
-.app-toolbar {
-  height: $toolbar-height;
+.toolbar-container {
+  .app-toolbar {
+    height: $toolbar-height;
 
-  img {
-    width: 35px;
+    img {
+      width: 35px;
+    }
+  }
+
+  .app-progress-bar {
+    height: $progress-bar-height;
   }
 }

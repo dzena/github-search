@@ -521,6 +521,81 @@
           }
         }
       }
+    },
+    "utils-http-interceptor": {
+      "projectType": "library",
+      "root": "libs/utils/http-interceptor",
+      "sourceRoot": "libs/utils/http-interceptor/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/utils/http-interceptor/src/**/*.ts",
+              "libs/utils/http-interceptor/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/utils/http-interceptor"],
+          "options": {
+            "jestConfig": "libs/utils/http-interceptor/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-services-http-loading-interceptor": {
+      "projectType": "library",
+      "root": "libs/shared/services/http-loading-interceptor",
+      "sourceRoot": "libs/shared/services/http-loading-interceptor/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/services/http-loading-interceptor/src/**/*.ts",
+              "libs/shared/services/http-loading-interceptor/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/services/http-loading-interceptor"],
+          "options": {
+            "jestConfig": "libs/shared/services/http-loading-interceptor/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui-kit-loading-progress": {
+      "projectType": "library",
+      "root": "libs/ui-kit/loading-progress",
+      "sourceRoot": "libs/ui-kit/loading-progress/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-kit/loading-progress/src/**/*.ts",
+              "libs/ui-kit/loading-progress/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-kit/loading-progress"],
+          "options": {
+            "jestConfig": "libs/ui-kit/loading-progress/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
