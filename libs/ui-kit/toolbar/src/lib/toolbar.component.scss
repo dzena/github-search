@@ -1,9 +1,10 @@
-$toolbar-height: 52px;
+@import 'variables';
+
 $progress-bar-height: 4px;
 
 .toolbar-container {
   .app-toolbar {
-    height: $toolbar-height;
+    height: $app-toolbar-height - $progress-bar-height;
 
     img {
       width: 35px;

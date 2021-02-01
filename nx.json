@@ -38,6 +38,7 @@
     "feature-shared-search-result-item-details": { "tags": [] },
     "utils-http-interceptor": { "tags": [] },
     "ui-kit-loading-progress": { "tags": [] },
-    "shared-http-interceptors": { "tags": [] }
+    "shared-http-interceptors": { "tags": [] },
+    "shared-styles": { "tags": [] }
   }
 }

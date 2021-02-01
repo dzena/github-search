@@ -56,7 +56,8 @@
       ],
       "@github-search/shared/http-interceptors": [
         "libs/shared/http-interceptors/src/index.ts"
-      ]
+      ],
+      "@github-search/shared/styles": ["libs/shared/styles/src/index.scss"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -19,5 +19,6 @@ module.exports = {
     '<rootDir>/libs/utils/http-interceptor',
     '<rootDir>/libs/ui-kit/loading-progress',
     '<rootDir>/libs/shared/http-interceptors',
+    '<rootDir>/libs/shared/styles',
   ],
 };

@@ -1,6 +1,7 @@
+@import 'variables';
+
 .search-res-sidenav-container {
-  // 64px is the height of the toolbar TODO export as variable
-  height: calc(100% - 56px);
+  height: calc(100% - #{$app-toolbar-height});
 
   .search-res-sidenav {
     width: 230px;
