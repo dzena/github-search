@@ -16,7 +16,7 @@ export class SearchResultsPageComponent {
       return;
     }
 
-    const queryParams: Partial<IListQueryParamsModel> = { q };
+    const queryParams: Partial<IListQueryParamsModel> = { q, page: '1' };
     this._router.navigate([], {
       relativeTo: this._route,
       queryParams,
