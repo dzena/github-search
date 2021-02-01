@@ -1,8 +1,17 @@
-<div fxLayout="column" fxFill>
+<div fxLayout="column" fxFill class="search-page-container">
   <github-search-toolbar></github-search-toolbar>
-  <div fxLayoutAlign="center start" fxFlexOffset="10">
-    <github-search-search-form
-      (onSubmit)="search($event)"
-    ></github-search-search-form>
+  <div fxLayoutAlign="center center" fxFlexOffset="10">
+    <div fxFlex="40" fxLayout="column" fxLayoutGap="0">
+      <h2 fxLayoutAlign="start center">
+        <mat-icon class="search-icon">search</mat-icon>
+        Search more than 66M users
+      </h2>
+      <github-search-search-form
+        [showSearchIcon]="false"
+        (onSubmit)="search($event)"
+        fxFlex="100"
+        class="search-form"
+      ></github-search-search-form>
+    </div>
   </div>
 </div>

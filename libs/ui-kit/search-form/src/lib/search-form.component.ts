@@ -16,6 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchFormComponent implements AfterViewInit {
   @Input() showSearchButton = true;
+  @Input() showSearchIcon = true;
 
   @Output() onSubmit = new EventEmitter<string>();
 

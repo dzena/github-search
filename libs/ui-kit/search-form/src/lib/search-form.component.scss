@@ -1,6 +1,10 @@
+:host-context(.search-page-container) .search-input {
+  width: 100%;
+}
+
 .search-form {
-  mat-form-field {
-    // tmp workaround
+  .search-input {
+    // TODO -> ViewEncapsulation.None
     ::ng-deep .mat-form-field-wrapper {
       padding-bottom: 0;
     }

@@ -5,10 +5,10 @@
   fxLayoutGap="5px"
   class="search-form"
 >
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" class="search-input">
     <mat-label>Search</mat-label>
     <input matInput type="text" name="q" ngModel [value]="value" />
-    <mat-icon matPrefix>search</mat-icon>
+    <mat-icon *ngIf="showSearchIcon" matPrefix>search</mat-icon>
   </mat-form-field>
 
   <button *ngIf="showSearchButton" mat-button type="submit" color="primary">
