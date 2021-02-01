@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatPaginatorModule,
     MatSelectModule,
+    MatBottomSheetModule,
   ],
   exports: [
     FlexLayoutModule,
@@ -31,6 +33,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     MatPaginatorModule,
     MatSelectModule,
+    MatBottomSheetModule,
   ],
 })
 export class MaterialModule {}

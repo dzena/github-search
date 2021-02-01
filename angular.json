@@ -494,6 +494,33 @@
           }
         }
       }
+    },
+    "feature-shared-search-result-item-details": {
+      "projectType": "library",
+      "root": "libs/feature/shared/search-result-item-details",
+      "sourceRoot": "libs/feature/shared/search-result-item-details/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/shared/search-result-item-details/src/**/*.ts",
+              "libs/feature/shared/search-result-item-details/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/feature/shared/search-result-item-details"
+          ],
+          "options": {
+            "jestConfig": "libs/feature/shared/search-result-item-details/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

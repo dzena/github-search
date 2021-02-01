@@ -15,6 +15,9 @@
       <p matLine>
         <span>{{ item.description }}</span>
       </p>
+      <button mat-icon-button (click)="itemDetails.next(item)">
+        <mat-icon>read_more</mat-icon>
+      </button>
     </mat-list-item>
   </mat-list>
 </div>

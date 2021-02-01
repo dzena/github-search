@@ -3,15 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import {
-  IListFilterModel,
   IListItemModel,
-  IUserModel,
-  RoutedEntityType,
+  IUserListModel, IUserModel,
+  RoutedEntityType
 } from '@github-search/model';
 import { SearchService } from '@github-search/feature/api/search';
 import { UsersService } from '@github-search/feature/api/users';
 
-type SearchModel = IUserModel;
+type SearchModel = IUserListModel | IUserModel;
 
 export abstract class RoutedEntityList {
   public listData$: Observable<{

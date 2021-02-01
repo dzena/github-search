@@ -1,5 +1,5 @@
 // TODO should be inside env file
-const BASE_URL = 'https://api.github.com/search';
+const BASE_URL = 'https://api.github.com';
 
 function _partial(fn: Function, ...args) {
   return (...rest) => {

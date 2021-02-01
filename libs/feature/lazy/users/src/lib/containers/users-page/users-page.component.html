@@ -2,6 +2,7 @@
   <github-search-list
     [list]="listData.items"
     [totalCount]="listData.totalCount"
+    (itemDetails)="showUserDetails($event)"
   >
     <github-search-list-filter
       [options]="filterOptions"

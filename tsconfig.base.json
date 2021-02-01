@@ -44,6 +44,9 @@
       ],
       "@github-search/shared/directives": [
         "libs/shared/directives/src/index.ts"
+      ],
+      "@github-search/feature/shared/search-result-item-details": [
+        "libs/feature/shared/search-result-item-details/src/index.ts"
       ]
     }
   },

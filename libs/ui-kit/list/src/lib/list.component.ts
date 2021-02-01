@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  Output,
+} from '@angular/core';
 import { IListItemModel } from '@github-search/model';
 
 @Component({
@@ -10,6 +16,8 @@ import { IListItemModel } from '@github-search/model';
 export class ListComponent {
   @Input() list: IListItemModel[];
   @Input() totalCount: number;
+
+  @Output() itemDetails = new EventEmitter<IListItemModel>();
 
   public readonly pageSizeOptions = [10, 25, 50];
 

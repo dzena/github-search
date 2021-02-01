@@ -16,4 +16,5 @@ export abstract class SearchService<T> {
   protected constructor(protected http: HttpClient) {}
 
   public abstract getSearchResults(): Observable<T[]>;
+  public abstract getById(id: string): Observable<T>;
 }

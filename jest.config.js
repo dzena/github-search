@@ -15,5 +15,6 @@ module.exports = {
     '<rootDir>/libs/ui-kit/list-filter',
     '<rootDir>/libs/ui-kit/search-form',
     '<rootDir>/libs/shared/directives',
+    '<rootDir>/libs/feature/shared/search-result-item-details',
   ],
 };

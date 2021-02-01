@@ -34,6 +34,7 @@
     "ui-kit-list": { "tags": [] },
     "ui-kit-list-filter": { "tags": [] },
     "ui-kit-search-form": { "tags": [] },
-    "shared-directives": { "tags": [] }
+    "shared-directives": { "tags": [] },
+    "feature-shared-search-result-item-details": { "tags": [] }
   }
 }
