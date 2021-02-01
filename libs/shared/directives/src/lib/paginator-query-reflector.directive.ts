@@ -42,14 +42,16 @@ export class PaginatorQueryReflectorDirective
   }
 
   private _updatePaginatorFromQueryParams(): void {
-    const { page, per_page } = this._route.snapshot.queryParams;
+    this._route.queryParams
+      .pipe(takeUntil(this._unsubscribe))
+      .subscribe(({ page, per_page }) => {
+        if (per_page) {
+          this.paginator.pageSize = per_page;
+        }
 
-    if (per_page) {
-      this.paginator.pageSize = per_page;
-    }
-
-    if (page) {
-      this.paginator.pageIndex = parseInt(page) - 1;
-    }
+        if (page) {
+          this.paginator.pageIndex = parseInt(page) - 1;
+        }
+      });
   }
 }
