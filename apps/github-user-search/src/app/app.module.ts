@@ -6,7 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpInterceptorService } from '@github-search/utils/http-interceptor';
-import { HttpLoadingInterceptorService } from '@github-search/shared/services/http-loading-interceptor';
+import {
+  ErrorInterceptorService,
+  LoadingInterceptorService,
+  SharedHttpInterceptorsModule,
+} from '@github-search/shared/http-interceptors';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +19,7 @@ import { HttpLoadingInterceptorService } from '@github-search/shared/services/ht
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedHttpInterceptorsModule,
   ],
   providers: [
     {
@@ -24,7 +29,12 @@ import { HttpLoadingInterceptorService } from '@github-search/shared/services/ht
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpLoadingInterceptorService,
+      useClass: LoadingInterceptorService,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptorService,
       multi: true,
     },
   ],

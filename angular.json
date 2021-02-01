@@ -547,31 +547,6 @@
         }
       }
     },
-    "shared-services-http-loading-interceptor": {
-      "projectType": "library",
-      "root": "libs/shared/services/http-loading-interceptor",
-      "sourceRoot": "libs/shared/services/http-loading-interceptor/src",
-      "prefix": "github-search",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/shared/services/http-loading-interceptor/src/**/*.ts",
-              "libs/shared/services/http-loading-interceptor/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/services/http-loading-interceptor"],
-          "options": {
-            "jestConfig": "libs/shared/services/http-loading-interceptor/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "ui-kit-loading-progress": {
       "projectType": "library",
       "root": "libs/ui-kit/loading-progress",
@@ -592,6 +567,31 @@
           "outputs": ["coverage/libs/ui-kit/loading-progress"],
           "options": {
             "jestConfig": "libs/ui-kit/loading-progress/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-http-interceptors": {
+      "projectType": "library",
+      "root": "libs/shared/http-interceptors",
+      "sourceRoot": "libs/shared/http-interceptors/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/http-interceptors/src/**/*.ts",
+              "libs/shared/http-interceptors/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/http-interceptors"],
+          "options": {
+            "jestConfig": "libs/shared/http-interceptors/jest.config.js",
             "passWithNoTests": true
           }
         }

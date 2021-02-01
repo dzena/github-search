@@ -9,10 +9,8 @@ import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 import { LoadingProgressService } from '@github-search/ui-kit/loading-progress';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class HttpLoadingInterceptorService implements HttpInterceptor {
+@Injectable()
+export class LoadingInterceptorService implements HttpInterceptor {
   private _reqCount = 0;
 
   constructor(private _loadingProgressService: LoadingProgressService) {}

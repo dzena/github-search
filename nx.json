@@ -37,7 +37,7 @@
     "shared-directives": { "tags": [] },
     "feature-shared-search-result-item-details": { "tags": [] },
     "utils-http-interceptor": { "tags": [] },
-    "shared-services-http-loading-interceptor": { "tags": [] },
-    "ui-kit-loading-progress": { "tags": [] }
+    "ui-kit-loading-progress": { "tags": [] },
+    "shared-http-interceptors": { "tags": [] }
   }
 }

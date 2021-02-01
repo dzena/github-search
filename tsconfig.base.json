@@ -51,11 +51,11 @@
       "@github-search/utils/http-interceptor": [
         "libs/utils/http-interceptor/src/index.ts"
       ],
-      "@github-search/shared/services/http-loading-interceptor": [
-        "libs/shared/services/http-loading-interceptor/src/index.ts"
-      ],
       "@github-search/ui-kit/loading-progress": [
         "libs/ui-kit/loading-progress/src/index.ts"
+      ],
+      "@github-search/shared/http-interceptors": [
+        "libs/shared/http-interceptors/src/index.ts"
       ]
     }
   },

@@ -9,6 +9,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSelectModule,
     MatBottomSheetModule,
     MatProgressBarModule,
+    MatSnackBarModule,
   ],
   exports: [
     FlexLayoutModule,
@@ -37,6 +39,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSelectModule,
     MatBottomSheetModule,
     MatProgressBarModule,
+    MatSnackBarModule,
   ],
 })
 export class MaterialModule {}

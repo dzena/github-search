@@ -17,7 +17,7 @@ module.exports = {
     '<rootDir>/libs/shared/directives',
     '<rootDir>/libs/feature/shared/search-result-item-details',
     '<rootDir>/libs/utils/http-interceptor',
-    '<rootDir>/libs/shared/services/http-loading-interceptor',
     '<rootDir>/libs/ui-kit/loading-progress',
+    '<rootDir>/libs/shared/http-interceptors',
   ],
 };

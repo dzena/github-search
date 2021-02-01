@@ -11,12 +11,10 @@ export class LoadingProgressService {
   }
 
   public show(): void {
-    console.log('show');
     this._loading$.next(true);
   }
 
   public hide(): void {
-    console.log('hide');
     this._loading$.next(false);
   }
 }
