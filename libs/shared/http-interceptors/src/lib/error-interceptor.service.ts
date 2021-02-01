@@ -21,7 +21,10 @@ export class ErrorInterceptorService implements HttpInterceptor {
     return next.handle(req).pipe(
       retry(2),
       catchError((e: HttpErrorResponse) => {
-        this._snackBar.open(e.error.message);
+        this._snackBar.open(e.error.message, null, {
+          announcementMessage: 'Error',
+          duration: 2000,
+        });
         return throwError(e);
       })
     );

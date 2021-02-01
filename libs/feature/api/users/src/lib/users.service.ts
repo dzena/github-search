@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable } from 'rxjs';
 
 import { SearchService } from '@github-search/feature/api/search';
 import {
@@ -9,7 +9,7 @@ import {
   IUserModel,
 } from '@github-search/model';
 import { ActivatedRoute } from '@angular/router';
-import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { catchError, filter, map, switchMap, tap } from 'rxjs/operators';
 import { getEndpoint } from '@github-search/utils/func';
 
 interface IApiUsers {
@@ -34,7 +34,8 @@ export class UsersService extends SearchService<IUserListModel | IUserModel> {
           .get<IApiUsers>(getEndpoint('search/users'), { params })
           .pipe(
             tap((response) => this.count$.next(response.total_count)),
-            map((response) => response.items)
+            map((response) => response.items),
+            catchError(() => EMPTY)
           );
       })
     );
