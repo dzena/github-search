@@ -4,14 +4,21 @@
 </div>
 <div class="list-container">
   <mat-list class="list">
-    <mat-list-item *ngFor="let item of list; trackBy: trackBy" class="list-item">
+    <mat-list-item
+      *ngFor="let item of list; trackBy: trackBy"
+      class="list-item"
+    >
       <img
         matListAvatar
         *ngIf="!!item.avatar"
         [src]="item.avatar"
         alt="avatar"
       />
-      <h3 matLine>{{ item.title }}</h3>
+      <h3 matLine class="list-item-title">
+        <a [href]="item.external_url" target="_blank" rel="noopener">
+          {{ item.title }}
+        </a>
+      </h3>
       <p matLine>
         <span>{{ item.description }}</span>
       </p>

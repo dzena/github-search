@@ -30,6 +30,7 @@ export class RepositoriesPageComponent extends RoutedEntityList {
       language,
       stargazers_count,
       updated_at,
+      html_url,
     } = repo;
     const tags: IListItemTagModel[] = [
       { title: 'Language', description: language },
@@ -40,6 +41,12 @@ export class RepositoriesPageComponent extends RoutedEntityList {
       },
     ].filter((t) => !!t.description);
 
-    return { id: full_name, title: full_name, description, tags };
+    return {
+      id: full_name,
+      title: full_name,
+      description,
+      external_url: html_url,
+      tags,
+    };
   }
 }

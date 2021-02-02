@@ -47,8 +47,8 @@ export class UsersPageComponent extends RoutedEntityList {
   }
 
   protected mapToListItem(item: IUserListModel): IListItemModel {
-    const { avatar_url: avatar, login: title } = item;
-    return { id: title, title, avatar };
+    const { avatar_url: avatar, login: title, html_url } = item;
+    return { id: title, title, avatar, external_url: html_url };
   }
 
   private _mapToDetailsItem(user: IUserModel): ISearchResultItemDetailsModel[] {

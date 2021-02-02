@@ -4,4 +4,5 @@ export interface IRepositoryListModel {
   stargazers_count: number;
   updated_at: string;
   language: string;
+  html_url: string;
 }
