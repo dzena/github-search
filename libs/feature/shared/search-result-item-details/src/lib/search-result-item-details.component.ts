@@ -1,5 +1,8 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
-import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import {
+  MAT_BOTTOM_SHEET_DATA,
+  MatBottomSheetRef,
+} from '@angular/material/bottom-sheet';
 import { ISearchResultItemDetailsModel } from '@github-search/model';
 
 @Component({
@@ -10,6 +13,11 @@ import { ISearchResultItemDetailsModel } from '@github-search/model';
 })
 export class SearchResultItemDetailsComponent {
   constructor(
-    @Inject(MAT_BOTTOM_SHEET_DATA) public data: ISearchResultItemDetailsModel[]
+    @Inject(MAT_BOTTOM_SHEET_DATA) public data: ISearchResultItemDetailsModel[],
+    private _sheetRef: MatBottomSheetRef
   ) {}
+
+  public closeDetails(): void {
+    this._sheetRef.dismiss();
+  }
 }

@@ -1,4 +1,12 @@
-<mat-list>
+<button
+  mat-icon-button
+  class="search-details-close"
+  (click)="closeDetails()"
+  disableRipple
+>
+  <mat-icon>close</mat-icon>
+</button>
+<mat-list class="search-details-list" fxFlex="90">
   <mat-list-item *ngFor="let item of data">
     <h3 matLine>{{ item.label }}: {{ item.value || '--' }}</h3>
   </mat-list-item>
