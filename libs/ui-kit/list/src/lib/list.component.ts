@@ -16,8 +16,9 @@ import { IListItemModel } from '@github-search/model';
 export class ListComponent {
   @Input() list: IListItemModel[];
   @Input() totalCount: number;
+  @Input() showReadMoreBtn = true;
 
-  @Output() itemDetails = new EventEmitter<IListItemModel>();
+  @Output() readMore = new EventEmitter<IListItemModel>();
 
   public readonly pageSizeOptions = [10, 25, 50];
 

@@ -11,6 +11,26 @@ $content-h-spacing: 100px;
   height: calc(100% - #{$paginator-height} - #{$heading-height});
   padding: 0 $content-h-spacing;
   overflow: auto;
+
+  .list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .list-item-tag {
+    margin-right: 3px;
+    border: solid 1px #dddddd;
+    padding: 1px 3px 1px 3px;
+    border-radius: 4px;
+    display: inline-block;
+    color: #9b9b9b;
+    font-size: 9px;
+    letter-spacing: 0;
+    line-height: 10px;
+  }
 }
 
 .paginator {

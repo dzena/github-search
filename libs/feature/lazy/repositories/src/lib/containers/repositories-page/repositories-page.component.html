@@ -2,7 +2,7 @@
   <github-search-list
     [list]="listData.items"
     [totalCount]="listData.totalCount"
-    (readMore)="showUserDetails($event)"
+    [showReadMoreBtn]="false"
   >
     <github-search-list-filter
       [options]="filterOptions"

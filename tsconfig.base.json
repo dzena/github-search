@@ -57,7 +57,13 @@
       "@github-search/shared/http-interceptors": [
         "libs/shared/http-interceptors/src/index.ts"
       ],
-      "@github-search/shared/styles": ["libs/shared/styles/src/index.scss"]
+      "@github-search/shared/styles": ["libs/shared/styles/src/index.scss"],
+      "@github-search/feature/api/repositories": [
+        "libs/feature/api/repositories/src/index.ts"
+      ],
+      "@github-search/feature/lazy/repositories": [
+        "libs/feature/lazy/repositories/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

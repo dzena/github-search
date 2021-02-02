@@ -7,6 +7,6 @@ export interface IListItemModel {
 }
 
 export interface IListItemTagModel {
-  icon: string;
-  description: string;
+  title: string;
+  description: string | number;
 }

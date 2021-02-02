@@ -17,6 +17,13 @@ const routes: Routes = [
         (m) => m.FeatureLazyUsersModule
       ),
   },
+  {
+    path: 'search/repositories',
+    loadChildren: () =>
+      import('@github-search/feature/lazy/repositories').then(
+        (m) => m.FeatureLazyRepositoriesModule
+      ),
+  },
 ];
 
 @NgModule({

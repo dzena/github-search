@@ -3,5 +3,5 @@ export interface IListQueryParamsModel {
   page: string;
   per_page: string;
   sort: string;
-  order: 'asc' | 'desc'
+  order: string
 }

@@ -625,6 +625,56 @@
           }
         }
       }
+    },
+    "feature-api-repositories": {
+      "projectType": "library",
+      "root": "libs/feature/api/repositories",
+      "sourceRoot": "libs/feature/api/repositories/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/api/repositories/src/**/*.ts",
+              "libs/feature/api/repositories/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/api/repositories"],
+          "options": {
+            "jestConfig": "libs/feature/api/repositories/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "feature-lazy-repositories": {
+      "projectType": "library",
+      "root": "libs/feature/lazy/repositories",
+      "sourceRoot": "libs/feature/lazy/repositories/src",
+      "prefix": "github-search",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature/lazy/repositories/src/**/*.ts",
+              "libs/feature/lazy/repositories/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature/lazy/repositories"],
+          "options": {
+            "jestConfig": "libs/feature/lazy/repositories/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

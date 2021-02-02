@@ -20,5 +20,7 @@ module.exports = {
     '<rootDir>/libs/ui-kit/loading-progress',
     '<rootDir>/libs/shared/http-interceptors',
     '<rootDir>/libs/shared/styles',
+    '<rootDir>/libs/feature/api/repositories',
+    '<rootDir>/libs/feature/lazy/repositories',
   ],
 };

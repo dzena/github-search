@@ -9,8 +9,24 @@
       <a
         mat-list-item
         [routerLink]="'/search/users'"
+        [queryParams]="{
+          q: route.snapshot.queryParams.q,
+          page: '1',
+          per_page: route.snapshot.queryParams.per_page
+        }"
         routerLinkActive="active-menu-item"
         >Users</a
+      >
+      <a
+        mat-list-item
+        [routerLink]="'/search/repositories'"
+        [queryParams]="{
+          q: route.snapshot.queryParams.q,
+          page: '1',
+          per_page: route.snapshot.queryParams.per_page
+        }"
+        routerLinkActive="active-menu-item"
+        >Repositories</a
       >
     </mat-nav-list>
   </mat-sidenav>

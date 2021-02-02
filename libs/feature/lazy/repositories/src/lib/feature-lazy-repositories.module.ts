@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeatureLazyUsersRoutingModule } from './feature-lazy-users-routing.module';
-import { UsersPageComponent } from './containers/users-page/users-page.component';
+import { FeatureLazyRepositoriesRoutingModule } from './feature-lazy-repositories-routing.module';
+import { RepositoriesPageComponent } from './containers/repositories-page/repositories-page.component';
 import { UiKitListModule } from '@github-search/ui-kit/list';
 import { UiKitListFilterModule } from '@github-search/ui-kit/list-filter';
 import { MaterialModule } from '@github-search/material';
@@ -9,11 +9,11 @@ import { MaterialModule } from '@github-search/material';
 @NgModule({
   imports: [
     CommonModule,
-    FeatureLazyUsersRoutingModule,
+    FeatureLazyRepositoriesRoutingModule,
     UiKitListModule,
     UiKitListFilterModule,
-    MaterialModule,
+    MaterialModule
   ],
-  declarations: [UsersPageComponent],
+  declarations: [RepositoriesPageComponent],
 })
-export class FeatureLazyUsersModule {}
+export class FeatureLazyRepositoriesModule {}

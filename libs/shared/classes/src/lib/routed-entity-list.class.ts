@@ -4,13 +4,16 @@ import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
 import {
   IListItemModel,
-  IUserListModel, IUserModel,
-  RoutedEntityType
+  IRepositoryListModel,
+  IUserListModel,
+  IUserModel,
+  RoutedEntityType,
 } from '@github-search/model';
 import { SearchService } from '@github-search/feature/api/search';
 import { UsersService } from '@github-search/feature/api/users';
+import { RepositoriesService } from '@github-search/feature/api/repositories';
 
-type SearchModel = IUserListModel | IUserModel;
+type SearchModel = IUserListModel | IUserModel | IRepositoryListModel;
 
 export abstract class RoutedEntityList {
   public listData$: Observable<{
@@ -46,8 +49,12 @@ export abstract class RoutedEntityList {
     entityType: RoutedEntityType
   ): SearchService<SearchModel> {
     switch (entityType) {
-      case RoutedEntityType.users:
+      case RoutedEntityType.users: {
         return this.injector.get(UsersService);
+      }
+      case RoutedEntityType.repositories: {
+        return this.injector.get(RepositoriesService);
+      }
     }
   }
 }

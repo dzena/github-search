@@ -4,7 +4,7 @@
 </div>
 <div class="list-container">
   <mat-list class="list">
-    <mat-list-item *ngFor="let item of list; trackBy: trackBy">
+    <mat-list-item *ngFor="let item of list; trackBy: trackBy" class="list-item">
       <img
         matListAvatar
         *ngIf="!!item.avatar"
@@ -15,7 +15,19 @@
       <p matLine>
         <span>{{ item.description }}</span>
       </p>
-      <button mat-icon-button (click)="itemDetails.next(item)">
+      <p matLine *ngIf="!!item.tags?.length">
+        <span
+          *ngFor="let tag of item.tags"
+          [title]="tag.title"
+          class="list-item-tag"
+          >{{ tag.description }}</span
+        >
+      </p>
+      <button
+        mat-icon-button
+        *ngIf="showReadMoreBtn"
+        (click)="readMore.next(item)"
+      >
         <mat-icon>read_more</mat-icon>
       </button>
     </mat-list-item>
